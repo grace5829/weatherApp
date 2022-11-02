@@ -5,28 +5,28 @@ async function addCampusesStudents() {
  const forecast1 = {
       temp: 95,
       windSpeed: 0,
-      weather:'sunny',
+      weather:'Sunny',
       weekday:'Monday',
       realFeel:110
     }
   const forecast2 = {
     temp: 75,
     windSpeed: 5,
-    weather:'cloudy',
+    weather:'Cloudy',
     weekday:'Tuesday',
     realFeel:72
   }
   const forecast3 = {
     temp: 60,
     windSpeed: 10,
-    weather:'stormy',
+    weather:'Stormy',
     weekday:'Wednesday',
     realFeel:53
   }
   const forecast4 = {
     temp: 13,
     windSpeed: 30,
-    weather:'snowy',
+    weather:'Snowy',
     weekday:'Thursday',
     realFeel:-5
   }

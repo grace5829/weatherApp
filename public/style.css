@@ -1,4 +1,441 @@
 * {
-    box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
+  box-sizing: border-box;
+  background-color: black;
+}
+
+
+.heading {
+  color: purple;
+  font-family: optima;
+}
+
+.firstdiv {
+  color: rgb(189, 126, 136);
+  font-family: optima;
+  height: 100vh;
+  background-color: #361F27;
+}
+
+.weekday {
+  text-decoration: none;
+}
+
+.weekday:hover {
+  color: yellow;
+}
+
+.person {
+  position: absolute;
+  left: 45%;
+  z-index: 1;
+  background-color: transparent;
+}
+
+.head {
+  position: relative;
+  left: 55px;
+  width: 80px;
+  height: 80px;
+  background-color: #e3d4a1;
+  border-radius: 50%;
+}
+
+.body {
+  width: 70px;
+  height: 90px;
+  background-color: #e3d4a1;
+
+}
+
+.middle {
+  display: flex;
+  background-color: transparent;
+
+}
+
+.arm1 {
+  width: 60px;
+  height: 20px;
+  left: 10px;
+  background-color: #e3d4a1;
+}
+
+.arm2 {
+  width: 60px;
+  height: 20px;
+  background-color: #e3d4a1;
+}
+
+.legs {
+  display: flex;
+  position: relative;
+  left: 40px;
+  background-color: transparent;
+}
+
+.leg1 {
+  width: 30px;
+  height: 60px;
+  background-color: #e3d4a1;
+  margin-right: 6px;
+  margin-left: 22px;
+}
+
+.leg2 {
+  width: 30px;
+  height: 60px;
+  background-color: #e3d4a1;
+}
+
+.forecastInfo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  -webkit-text-stroke: 1px rgb(88, 186, 83);
+  font-size: 1.7rem;
+  font-family: Marker Felt;
+  border: thick double #4d8195;
+  padding: 8px;
+  opacity: .85;
+}
+
+.forecastsSunny {
+  border: 1px solid black;
+  height: 100vh;
+  position: relative;
+  background-color: rgb(238, 149, 86);
+  width: 100vw;
+  left: -1%;
+}
+
+.forecastsCloudy {
+  border: 1px solid black;
+  height: 100vh;
+  position: relative;
+  background-color: skyblue;
+  width: 100vw;
+  left: -1%;
+}
+
+.forecastsStormy {
+  border: 1px solid black;
+  height: 11100vh0VH;
+  position: relative;
+  background-color: rgb(41, 68, 95);
+  width: 100vw;
+  left: -1%;
+}
+
+.forecastsSnowy {
+  border: 1px solid black;
+  height: 100vh;
+  position: relative;
+  background-color: rgb(133, 163, 173);
+  width: 100vw;
+  left: -1%;
+  bottom: -1%;
+}
+
+.Sunny.one {
+  position: absolute;
+  right: 10px;
+  top: 60px;
+  width: 200px;
+  height: 200px;
+  background-color: #FFc400;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 20px #ffc40080,
+    0 0 0 40px #FFC40040,
+    0 0 0 60px #FFc40020,
+    0 0 0 80px #FFc40010,
+    0 0 0 100px #FFc40000,
+    0 0 40px 100px #FFc40010;
+  animation:
+    sunrise 2s infinite linear forwards,
+    rays 2s 2s infinite linear;
+
+}
+
+@keyframes sunrise {
+  0% {
+    box-shadow: none;
   }
+}
+
+@keyframes rays {
+  0% {
+    box-shadow:
+      0 0 0 0 #FFc40080,
+      0 0 0 20px #FFc40080,
+      0 0 0 40px #FFc40040,
+      0 0 0 60px #FFc40020,
+      0 0 0 80px #FFc40010,
+      0 0 40px 100px #FFc40010;
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 20px #FFc40080,
+      0 0 0 40px #FFc40040,
+      0 0 0 60px #FFc40020,
+      0 0 0 80px #FFc40010,
+      0 0 0 100px #FFc40000,
+      0 0 40px 100px #FFc40010;
+  }
+}
+
+.thermometer{
+  position: relative;
+  top: 20%;
+  left: 25px;
+height: 400px;
+width: 40px;
+background-color: white;
+border-radius: 100px;
+margin: 0px;
+
+}
+
+.thermometer::after{
+  width: 80px;
+  height: 80px;
+  background-color: rgb(255, 0, 0);
+  content: '';
+  top: 88%;
+  left: -50%;
+  position: absolute;
+  border-radius: 50px;
+}
+.thermometer::before{
+  width: 100%;
+  height: 20px;
+  background-color: rgb(255, 0, 0);
+  content: '';
+ border-radius: 50px;
+  position: absolute;
+  bottom: 0;
+  animation: hot 7s linear ;
+  animation-fill-mode: forwards;
+
+
+}
+@keyframes hot {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 100%;
+  }
+}
+
+.Cloudy {
+  position: absolute;
+  left: 0px;
+  background-color: #fcfcfc;
+  border-radius: 1000px;
+  border: 1px solid rgb(204, 201, 201);
+}
+
+.Cloudy.one {
+  top: 20%;
+  width: 200px;
+  height: 70px;
+  animation: cloudMovement 15s infinite linear;
+  border: 1px solid rgb(204, 201, 201);
+
+}
+
+.Cloudy.two {
+  top: 15%;
+  width: 100px;
+  height: 30px;
+  animation: cloudMovement 10s infinite linear;
+  border: 1px solid rgb(204, 201, 201);
+
+}
+
+.Cloudy.three {
+  top: 10%;
+  width: 150px;
+  height: 50px;
+  animation: cloudMovement 13s infinite linear;
+  border: 1px solid rgb(204, 201, 201);
+
+}
+
+.cloudy.four {
+  top: 20%;
+  width: 80px;
+  height: 30px;
+  animation: cloudMovement 9s infinite linear;
+  border: 1px solid rgb(204, 201, 201);
+}
+
+.Cloudy.five {
+  top: 8%;
+  width: 120px;
+  height: 45px;
+  animation: cloudMovement 11s infinite linear;
+  border: 1px solid rgb(204, 201, 201);
+
+}
+
+.Cloudy::before {
+  content: '';
+  position: absolute;
+  top: -80%;
+  left: 10%;
+  width: 50%;
+  height: 150%;
+  background: #fcfcfc;
+  border-radius: 50%;
+}
+
+.Cloudy::after {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: 20%;
+  width: 30%;
+  height: 100%;
+  background: #fcfcfc;
+  border-radius: 50%;
+
+}
+
+@keyframes cloudMovement {
+  from {
+    left: 0;
+    transform: translatex(-100%);
+  }
+
+  to {
+    left: 100%;
+    transform: translatex(0%);
+  }
+}
+
+.Stormy {
+  background-image: url(rain.png);
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  animation: rain .3s infinite linear;
+  z-index: 0;
+}
+
+@keyframes rain {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: 20% 100%;
+  }
+}
+
+.Snowy {
+  position: absolute;
+  background-color: #fcfcfc;
+  border-radius: 1000px;
+  background-image: url(snow.png);
+}
+
+
+.Snowy.one {
+  width: .5rem;
+  height: .5rem;
+  left: 200px;
+  position: relative;
+  animation: snowing 6s linear infinite;
+  filter: blur(1.5px);
+  background-image: radial-gradient(5px 5px white);
+}
+
+.Snowy.two {
+  width: .15rem;
+  height: .15rem;
+  left: 100px;
+  position: relative;
+  animation: snowing 2s linear infinite;
+}
+
+.Snowy.three {
+  width: .25rem;
+  height: .25rem;
+  left: 400px;
+  position: relative;
+  animation: snowing 3s linear infinite;
+}
+
+.Snowy.four {
+  width: .35rem;
+  height: .35rem;
+  left: 650px;
+  position: relative;
+  animation: snowing 4s linear infinite;
+  filter: blur(1.5px);
+}
+
+.Snowy.five {
+  width: .2rem;
+  height: .2rem;
+  left: 1200px;
+  position: relative;
+  animation: snowing 5s linear infinite;
+}
+
+.Snowy.eight {
+  width: .35rem;
+  height: .35rem;
+  left: 1300px;
+  position: relative;
+  animation: snowing 6s linear infinite;
+}
+
+.Snowy.nine {
+  width: .5rem;
+  height: .5rem;
+  left: 600px;
+  position: relative;
+  filter: blur(1.5px);
+
+  animation: snowing 8s linear infinite;
+}
+
+.Snowy.ten {
+  width: .25rem;
+  height: .25rem;
+  left: 1300px;
+  position: relative;
+  animation: snowing 12s linear infinite;
+}
+
+.Snowy.eleven {
+  width: .25rem;
+  height: .25rem;
+  left: 1000px;
+  position: relative;
+  animation: snowing 8s linear infinite;
+}
+
+.Snowy.twelve {
+  width: .25rem;
+  height: .25rem;
+  left: 1600px;
+  position: relative;
+  animation: snowing 10s linear infinite;
+}
+
+@keyframes snowing {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 100%;
+  }
+}
