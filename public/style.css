@@ -1,11 +1,11 @@
 * {
   box-sizing: border-box;
-  background-color: black;
+  background-color: rgb(62, 61, 61);
 }
 
 
 .heading {
-  color: purple;
+  color: rgb(67, 14, 67);
   font-family: optima;
 }
 
@@ -14,77 +14,22 @@
   font-family: optima;
   height: 100vh;
   background-color: #361F27;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.intro{
+  position: relative;
+  border: thick double #4d8195;
+  width: 30%;
+  height: 10%;
+}
 .weekday {
   text-decoration: none;
 }
 
 .weekday:hover {
   color: yellow;
-}
-
-.person {
-  position: absolute;
-  left: 45%;
-  z-index: 1;
-  background-color: transparent;
-}
-
-.head {
-  position: relative;
-  left: 55px;
-  width: 80px;
-  height: 80px;
-  background-color: #e3d4a1;
-  border-radius: 50%;
-}
-
-.body {
-  width: 70px;
-  height: 90px;
-  background-color: #e3d4a1;
-
-}
-
-.middle {
-  display: flex;
-  background-color: transparent;
-
-}
-
-.arm1 {
-  width: 60px;
-  height: 20px;
-  left: 10px;
-  background-color: #e3d4a1;
-}
-
-.arm2 {
-  width: 60px;
-  height: 20px;
-  background-color: #e3d4a1;
-}
-
-.legs {
-  display: flex;
-  position: relative;
-  left: 40px;
-  background-color: transparent;
-}
-
-.leg1 {
-  width: 30px;
-  height: 60px;
-  background-color: #e3d4a1;
-  margin-right: 6px;
-  margin-left: 22px;
-}
-
-.leg2 {
-  width: 30px;
-  height: 60px;
-  background-color: #e3d4a1;
 }
 
 .forecastInfo {
@@ -319,7 +264,7 @@ margin: 0px;
 }
 
 .Stormy {
-  background-image: url(rain.png);
+  background-image: url(./images/rain.png);
   height: 100vh;
   left: 0px;
   top: 0px;
@@ -348,7 +293,7 @@ margin: 0px;
 .Snowy.one {
   width: .5rem;
   height: .5rem;
-  left: 200px;
+  left: 87%;
   position: relative;
   animation: snowing 6s linear infinite;
   filter: blur(1.5px);
@@ -358,9 +303,9 @@ margin: 0px;
 .Snowy.two {
   width: .15rem;
   height: .15rem;
-  left: 100px;
+  left: 15%;
   position: relative;
-  animation: snowing 2s linear infinite;
+  animation: snowing 3s linear infinite;
 }
 
 .Snowy.three {
@@ -374,7 +319,7 @@ margin: 0px;
 .Snowy.four {
   width: .35rem;
   height: .35rem;
-  left: 650px;
+  left: 96%;
   position: relative;
   animation: snowing 4s linear infinite;
   filter: blur(1.5px);
@@ -383,7 +328,7 @@ margin: 0px;
 .Snowy.five {
   width: .2rem;
   height: .2rem;
-  left: 1200px;
+  left: 85%;
   position: relative;
   animation: snowing 5s linear infinite;
 }
@@ -391,7 +336,7 @@ margin: 0px;
 .Snowy.eight {
   width: .35rem;
   height: .35rem;
-  left: 1300px;
+  left: 5%;
   position: relative;
   animation: snowing 6s linear infinite;
 }
@@ -399,7 +344,7 @@ margin: 0px;
 .Snowy.nine {
   width: .5rem;
   height: .5rem;
-  left: 600px;
+  left: 33%;
   position: relative;
   filter: blur(1.5px);
 
@@ -409,7 +354,7 @@ margin: 0px;
 .Snowy.ten {
   width: .25rem;
   height: .25rem;
-  left: 1300px;
+  left: 20%;
   position: relative;
   animation: snowing 12s linear infinite;
 }
@@ -417,25 +362,187 @@ margin: 0px;
 .Snowy.eleven {
   width: .25rem;
   height: .25rem;
-  left: 1000px;
+  left: 45%;
   position: relative;
   animation: snowing 8s linear infinite;
 }
 
 .Snowy.twelve {
+  width: .35rem;
+  height: .35rem;
+  left: 60%;
+  position: relative;
+  animation: snowing 7s linear infinite;
+}
+.Snowy.thirteen {
   width: .25rem;
   height: .25rem;
-  left: 1600px;
+  left: 70%;
   position: relative;
   animation: snowing 10s linear infinite;
 }
-
+.Snowy.fourteen {
+  width: .45rem;
+  height: .45rem;
+  left: 80%;
+  position: relative;
+  animation: snowing 6s linear infinite;
+}
 @keyframes snowing {
   0% {
     top: 0;
   }
-
   100% {
     top: 100%;
   }
+}
+
+.activites{
+  position: absolute;
+  width: 30%;
+  margin: 0;
+  left: 30%;
+  top: 10%;
+  background-color: transparent;
+  opacity: 88%;
+  list-style: none;
+  padding: 10px;
+  font-family: Marker Felt;
+
+}
+.Sunnyactivity{
+  background-color: black;
+  opacity: 88%;
+  padding: 1rem;
+  border: 1px solid yellow;
+  margin: 10px;
+  height: 12rem;
+  width: 12rem;
+}
+.Sunnyactivity.two{
+  position: relative;
+  left: 30%;
+}
+.Sunnyactivity.one:hover{
+  background-image: url(./images/pool.webp);
+  background-size: 12rem 12rem;
+}
+.Sunnyactivity.two:hover{
+  background-image: url(./images/sundae.jpeg);
+  background-size: 12rem 12rem;
+}
+.Sunnyactivity.three:hover{
+  background-image: url(./images/ac.jpeg);
+  background-size: 140%;
+}
+.Cloudyactivity{
+  background-color: black;
+  opacity: 88%;
+  padding: 1rem;
+  border: 1px solid yellow;
+  margin: 10px;
+  height: 12rem;
+  width: 12rem;
+}
+.Cloudyactivity.two{
+  position: relative;
+  left: 20%;
+}
+.Cloudyactivity.one:hover{
+  background-image: url(./images/picnic.webp);
+  background-size: 160%;
+}
+.Cloudyactivity.two:hover{
+  background-image: url(./images/hike.jpeg);
+  background-size: 14rem 13rem;
+}
+.Cloudyactivity.three:hover{
+  background-image: url(./images/kayak.webp);
+  background-size: 12rem 12rem;
+
+}
+
+.Stormyactivity{
+  background-color: black;
+  opacity: 88%;
+  padding: .5rem;
+  border: 1px solid yellow;
+  margin: 10px;
+  height: 12rem;
+  width: 12rem;
+}
+.Stormyactivity.two{
+  position: relative;
+  left: 20%;
+}
+.Stormyactivity.one:hover{
+  background-image: url(./images/fort.jpeg);
+  background-size: 12rem 12rem;
+}
+.Stormyactivity.two:hover{
+  background-image: url(./images/games.jpeg);
+  background-size: 14rem 14rem;
+
+}
+.Stormyactivity.three:hover{
+  background-image: url(./images/baking.webp);
+  background-size: 12rem 12rem;
+}
+
+.Snowyactivity{
+  background-color: black;
+  opacity: 88%;
+  padding: 1rem;
+  border: 1px solid yellow;
+  margin: 10px;
+  height: 12rem;
+  width: 12rem;
+}
+.Snowyactivity.two{
+  position: relative;
+  left: 20%;
+}
+.Snowyactivity.one:hover{
+  background-image: url(./images/snowman.webp);
+  background-size: 12rem 12rem;
+}
+.Snowyactivity.two:hover{
+  background-image: url(./images/sled.jpeg);
+  background-size: 12rem 12rem;
+}
+.Snowyactivity.three:hover{
+  background-image: url(./images/hotchocolate.jpeg);
+  background-size: 12rem 13rem;
+}
+
+
+
+
+.forecast{
+  height: 80vh;
+  position: relative;
+  left: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+.history{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.historyImage{
+  width:40vw;
+padding: 10px;
+}
+
+.historyName{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.historyDes{
+  padding-top: 10px;
+  padding-bottom: 30px;
 }

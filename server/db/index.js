@@ -3,7 +3,6 @@
 
 const db = require('./database')
 const Forecast = require('./forecast')
-
 // This is a great place to establish associations between your models
 // (https://sequelize-guides.netlify.com/association-types/).
 // Example:
@@ -13,5 +12,5 @@ const Forecast = require('./forecast')
 module.exports = {
   // Include your models in this exports object as well!
   db,
-  Forecast
+  Forecast,
 }

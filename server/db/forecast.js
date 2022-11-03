@@ -37,6 +37,32 @@ const Forecast = db.define('forecast', {
     validate: {
       notEmpty: true,
     },
+  },
+  activity1:{
+    type: Sequelize.STRING,
+  },
+  activity2:{
+    type: Sequelize.STRING,
+  },
+  activity3:{
+    type: Sequelize.STRING,
+  },
+  historyName: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true,
+    },
+  },
+  historyDescription:{
+    type: Sequelize.TEXT('long'),
+    allowNull: false,
+    validate: {
+      notEmpty: true,
+    },
+  },
+  historyImageUrl: {
+    type: Sequelize.TEXT,
   }
 });
 

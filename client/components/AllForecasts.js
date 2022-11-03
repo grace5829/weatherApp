@@ -1,30 +1,54 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import { Link } from "react-router-dom";
 import { fetchForecasts, selectForecasts } from "../store/forecastsSlice";
+import { gsap } from "gsap";
+
+gsap.registerPlugin(ScrollTrigger)
 
 const Forecasts = () => {
 
   const forecasts = useSelector(selectForecasts)
 
-  console.log(forecasts)
+//   const revealRefs=useRef([])
+// revealRefs.current=[]
+
+  // useEffect(()=>{
+
+  //   revealRefs.current.forEach((el, index) => {
+  //     gsap.fromTo(el, {
+  //       autoAlpha:0
+  //     },{
+  //       duration:1,
+  //       autoAlpha:1,
+  //       ease:'none',
+  //       ScrollTrigger:{
+  //         id:`section-${index+1}`,
+  //         trigger:el,
+  //         start:'top center',
+  //         toggleActions: 'play none none reverse',
+  //         markers:true 
+  //       }
+  //     })
+  //     })
+  // },[])
+
+// const addToRefs= (el)=> {
+// if ( el && !revealRefs.current.includes(el)){
+//   revealRefs.current.push(el)
+// }
+// }
   return (
     <div>
-      <div className='person'>
-        <div className='head'> </div>
-        <div className='middle'>
-          <div className='arm1'> </div>
-          <div className='body'> </div>
-          <div className='arm2'> </div>
-        </div>
-        <div className='legs'>
-          <div className='leg1'> </div>
-          <div className='leg2'> </div>
-        </div>
-      </div>
+ <div className='firstdiv'>
+            <div className='intro'>
+            Scroll down to see today's history fact!
+            </div>
+            </div>
       {forecasts && forecasts.length
         ? forecasts.map((forecast) => (
-          <div className={'forecasts' + forecast.weather} key={forecast.id}>
+          <div  className={'forecasts' + forecast.weather} key={forecast.id}>
 
             <div className={forecast.weather + ' one'}  > </div>
             {forecast.weather === 'Sunny'?
@@ -60,7 +84,11 @@ const Forecasts = () => {
               <div >{forecast.weather} </div>
               <div>{forecast.temp}°F   </div>
             </div>
-
+              <ul className="activites"  >Fun activites for a {forecast.weather} day!!!
+                <li className={forecast.weather+"activity one"}>{forecast.activity1}</li>
+                <li  className={forecast.weather+"activity two"}>{forecast.activity2}</li>
+                <li  className={forecast.weather+"activity three"}>{forecast.activity3}</li>
+              </ul>
           </div>))
         : null}
     </div>

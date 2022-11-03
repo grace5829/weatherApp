@@ -16,8 +16,7 @@ const Main = () => {
           
         </nav>
         <main>
-          <h1 className='heading'> Welcome to my Weather App!</h1>
-          <div className='firstdiv'>Scroll down to see this weeks weather!</div>
+          <h1 className='heading'> Check the weather below!</h1>
           <div>
             <Routes>
               <Route path='/' element={<Forecasts />} />

@@ -6,7 +6,6 @@ import axios from "axios";
       "forecast", async (forecastId) => {
         try {
           const { data } = await axios.get(`/api/forecasts/${forecastId}`);
-          console.log(data)
           return data;
         } catch (err) {
           console.log(err);

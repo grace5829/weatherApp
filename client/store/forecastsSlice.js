@@ -6,7 +6,6 @@ export const fetchForecasts = createAsyncThunk(
     "forecasts", async () => {
       try {
         const { data } = await axios.get(`/api/forecasts`);
-        console.log(data)
         return data;
       } catch (err) {
         console.log(err);
